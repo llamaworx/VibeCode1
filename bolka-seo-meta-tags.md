@@ -36,11 +36,11 @@ Complete meta tag recommendations for all 85 pages to boost search visibility.
 ## Strategic Landing Pages
 
 ### NEW PAGE: Voice AI Anywhere (/voice-ai-anywhere) - **CREATE THIS**
-Hub page linking to Share, Embed, and Use Cases.
+Hub page showcasing all 15+ distribution channels: WhatsApp, SMS, Email, Instagram, Facebook, Telegram, QR codes, website widgets, and more.
 ```html
-<title>Voice AI Anywhere | Deploy on Browser, Website & Phone | Bolka</title>
-<meta name="description" content="Deploy voice AI anywhere - shareable links, website widgets, or phone lines. One platform, unlimited deployment options. No downloads required.">
-<meta name="keywords" content="voice AI anywhere, omnichannel voice AI, deploy voice AI, multi-platform AI agent, universal voice bot, voice AI deployment">
+<title>Voice AI Anywhere | Share on WhatsApp, Email, SMS, Social & More | Bolka</title>
+<meta name="description" content="Deploy voice AI anywhere - WhatsApp, SMS, Email, Instagram, Facebook, Telegram, website widgets, QR codes & phone. One link, every channel. No app downloads.">
+<meta name="keywords" content="voice AI anywhere, omnichannel voice AI, voice AI WhatsApp, voice AI SMS, voice AI email, voice bot Instagram, voice AI Facebook, voice AI Telegram, voice link sharing, QR code voice AI, multi-channel voice bot">
 ```
 
 ---
