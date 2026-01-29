@@ -33,60 +33,60 @@ Complete meta tag recommendations for all 85 pages to boost search visibility.
 
 ---
 
-## NEW: Strategic Landing Pages to Create
+## Strategic Landing Pages
 
-Based on competitor gaps, create these new pages:
-
-### Voice AI Anywhere (/voice-ai-anywhere) - **HIGH PRIORITY**
+### NEW PAGE: Voice AI Anywhere (/voice-ai-anywhere) - **CREATE THIS**
+Hub page linking to Share, Embed, and Use Cases.
 ```html
-<title>Voice AI Anywhere | Deploy AI Agents on Web, Phone & Mobile | Bolka</title>
-<meta name="description" content="Deploy voice AI anywhere - websites, browsers, phone lines, mobile apps, and kiosks. One platform, unlimited deployment options. No plugins required.">
-<meta name="keywords" content="voice AI anywhere, omnichannel voice AI, deploy voice AI, multi-platform AI agent, universal voice bot">
+<title>Voice AI Anywhere | Deploy on Browser, Website & Phone | Bolka</title>
+<meta name="description" content="Deploy voice AI anywhere - shareable links, website widgets, or phone lines. One platform, unlimited deployment options. No downloads required.">
+<meta name="keywords" content="voice AI anywhere, omnichannel voice AI, deploy voice AI, multi-platform AI agent, universal voice bot, voice AI deployment">
 ```
 
-### Voice AI for Browser (/voice-ai-browser) - **HIGH PRIORITY**
+---
+
+### EXISTING PAGE: Bolka Share (/share) - **UPDATE META TAGS**
+Already covers: Browser-based voice links (like payment links)
 ```html
-<title>Voice AI for Browser | No-Download Web Voice Agents | Bolka</title>
-<meta name="description" content="Add voice AI directly in the browser. WebRTC-powered, zero downloads, works on Chrome, Firefox, Safari & Edge. Engage visitors with natural voice conversations.">
-<meta name="keywords" content="voice AI browser, browser voice agent, WebRTC voice AI, web voice bot, no-download voice AI, in-browser AI assistant">
+<title>Voice AI Links | Shareable Browser Voice Agents | Bolka Share</title>
+<meta name="description" content="Share voice AI instantly via link - like a payment link, but for conversations. No app downloads, works in any browser. Send via SMS, email, or QR code.">
+<meta name="keywords" content="voice AI link, shareable voice bot, browser voice AI, voice AI URL, no-download voice agent, WebRTC voice link, voice AI for browser">
 ```
 
-### Voice AI for Websites (/voice-ai-websites) - **HIGH PRIORITY**
+### EXISTING PAGE: Bolka Embed (/embed) - **UPDATE META TAGS**
+Already covers: Voice AI Widget for websites
 ```html
-<title>Voice AI for Websites | Add Talking AI to Any Site | Bolka</title>
-<meta name="description" content="Transform your website with voice AI. Add a talking assistant that answers questions, captures leads, and guides visitors. One-line embed code.">
-<meta name="keywords" content="voice AI website, website voice assistant, talking website AI, voice bot for website, AI website chat, voice-enabled website">
+<title>Voice AI Widget | Embed Voice Bot on Any Website | Bolka</title>
+<meta name="description" content="Drop-in voice AI widget for your website. One line of code, customizable design, works on all browsers. Add a talking assistant in 5 minutes.">
+<meta name="keywords" content="voice AI widget, embed voice AI, website voice bot, voice chat widget, embeddable AI assistant, voice AI for websites, website voice assistant">
 ```
 
-### Voice AI Widget (/voice-ai-widget)
-```html
-<title>Voice AI Widget | Embeddable Voice Bot for Your Site | Bolka</title>
-<meta name="description" content="Drop-in voice AI widget for any website. Customizable design, branded experience, and seamless integration. Install in under 5 minutes.">
-<meta name="keywords" content="voice AI widget, embeddable voice bot, voice chat widget, AI widget for website, voice assistant widget">
-```
+---
 
-### Voice AI API (/api)
+### FUTURE PAGES (Create Later)
+
+#### Voice AI API (/api)
 ```html
 <title>Voice AI API | Build Custom Voice Agents | Bolka Developer Platform</title>
 <meta name="description" content="Powerful Voice AI API for developers. RESTful endpoints, WebSocket streaming, custom voices, and real-time transcription. Start building in minutes.">
 <meta name="keywords" content="voice AI API, conversational AI API, voice agent API, speech API, voice bot developer, AI voice SDK">
 ```
 
-### No-Code Voice AI (/no-code)
+#### No-Code Voice AI (/no-code)
 ```html
 <title>No-Code Voice AI Builder | Create Voice Bots Without Coding | Bolka</title>
 <meta name="description" content="Build voice AI agents without writing code. Drag-and-drop builder, pre-built templates, and visual conversation designer. Launch in hours, not weeks.">
 <meta name="keywords" content="no-code voice AI, voice bot builder, visual AI builder, voice AI without coding, easy voice agent creator">
 ```
 
-### AI Phone Agent (/ai-phone-agent)
+#### AI Phone Agent (/ai-phone-agent)
 ```html
 <title>AI Phone Agent | Automate Inbound & Outbound Calls | Bolka</title>
 <meta name="description" content="AI agents that handle phone calls like humans. Automate customer support, sales calls, appointment booking, and surveys. Available 24/7.">
 <meta name="keywords" content="AI phone agent, automated phone calls, AI calling agent, phone bot, voice AI for calls, telephone AI">
 ```
 
-### Voice AI vs Chatbots (/voice-ai-vs-chatbots)
+#### Voice AI vs Chatbots (/voice-ai-vs-chatbots)
 ```html
 <title>Voice AI vs Chatbots | Why Voice Converts Better | Bolka</title>
 <meta name="description" content="Voice AI outperforms text chatbots: 3x higher engagement, faster resolution, and better accessibility. See the data on why voice wins.">
