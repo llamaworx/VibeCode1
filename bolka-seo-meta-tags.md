@@ -4,6 +4,168 @@ Complete meta tag recommendations for all 85 pages to boost search visibility.
 
 ---
 
+## Competitor Analysis & Keyword Gaps
+
+### Competitor Positioning Overview
+
+| Competitor | Primary Keywords | Unique Positioning |
+|------------|-----------------|-------------------|
+| **Vapi** | "Voice AI agents", "API-first", "developers" | Developer-focused, 150M+ calls, SOC2/HIPAA |
+| **Retell AI** | "AI voice agent platform", "phone call automation", "AI call center" | #1 platform claim, 600ms latency, LLM-based |
+| **Bland AI** | "Conversational AI", "enterprise phone calls", "voice cloning" | 1M concurrent calls, Conversational Pathways, $0.09/min |
+| **Bolna AI** | "Voice AI for India", "vernacular languages", "Hinglish" | India-first, 10+ Indian languages |
+| **ElevenLabs** | "WebRTC", "browser voice AI", "real-time voice" | Browser-native, no plugins |
+
+### Keywords Your Competitors Are Ranking For (That You Should Target)
+
+#### High-Value Keywords You're Missing:
+
+1. **"Voice AI for browser"** - ElevenLabs owns this
+2. **"Embed voice AI"** - Low competition, high intent
+3. **"Website voice bot"** - Voiceflow, Alan AI targeting
+4. **"Voice AI widget"** - Untapped opportunity
+5. **"No-code voice AI"** - Voiceflow dominates
+6. **"WebRTC voice AI"** - ElevenLabs, LiveKit
+7. **"Voice AI API"** - Vapi, Bland competing
+8. **"AI phone agent"** - Retell, Bland focus
+9. **"Voice AI anywhere"** - Nobody owns this yet!
+10. **"Browser-based voice assistant"** - Growing search volume
+
+---
+
+## NEW: Strategic Landing Pages to Create
+
+Based on competitor gaps, create these new pages:
+
+### Voice AI Anywhere (/voice-ai-anywhere) - **HIGH PRIORITY**
+```html
+<title>Voice AI Anywhere | Deploy AI Agents on Web, Phone & Mobile | Bolka</title>
+<meta name="description" content="Deploy voice AI anywhere - websites, browsers, phone lines, mobile apps, and kiosks. One platform, unlimited deployment options. No plugins required.">
+<meta name="keywords" content="voice AI anywhere, omnichannel voice AI, deploy voice AI, multi-platform AI agent, universal voice bot">
+```
+
+### Voice AI for Browser (/voice-ai-browser) - **HIGH PRIORITY**
+```html
+<title>Voice AI for Browser | No-Download Web Voice Agents | Bolka</title>
+<meta name="description" content="Add voice AI directly in the browser. WebRTC-powered, zero downloads, works on Chrome, Firefox, Safari & Edge. Engage visitors with natural voice conversations.">
+<meta name="keywords" content="voice AI browser, browser voice agent, WebRTC voice AI, web voice bot, no-download voice AI, in-browser AI assistant">
+```
+
+### Voice AI for Websites (/voice-ai-websites) - **HIGH PRIORITY**
+```html
+<title>Voice AI for Websites | Add Talking AI to Any Site | Bolka</title>
+<meta name="description" content="Transform your website with voice AI. Add a talking assistant that answers questions, captures leads, and guides visitors. One-line embed code.">
+<meta name="keywords" content="voice AI website, website voice assistant, talking website AI, voice bot for website, AI website chat, voice-enabled website">
+```
+
+### Voice AI Widget (/voice-ai-widget)
+```html
+<title>Voice AI Widget | Embeddable Voice Bot for Your Site | Bolka</title>
+<meta name="description" content="Drop-in voice AI widget for any website. Customizable design, branded experience, and seamless integration. Install in under 5 minutes.">
+<meta name="keywords" content="voice AI widget, embeddable voice bot, voice chat widget, AI widget for website, voice assistant widget">
+```
+
+### Voice AI API (/api)
+```html
+<title>Voice AI API | Build Custom Voice Agents | Bolka Developer Platform</title>
+<meta name="description" content="Powerful Voice AI API for developers. RESTful endpoints, WebSocket streaming, custom voices, and real-time transcription. Start building in minutes.">
+<meta name="keywords" content="voice AI API, conversational AI API, voice agent API, speech API, voice bot developer, AI voice SDK">
+```
+
+### No-Code Voice AI (/no-code)
+```html
+<title>No-Code Voice AI Builder | Create Voice Bots Without Coding | Bolka</title>
+<meta name="description" content="Build voice AI agents without writing code. Drag-and-drop builder, pre-built templates, and visual conversation designer. Launch in hours, not weeks.">
+<meta name="keywords" content="no-code voice AI, voice bot builder, visual AI builder, voice AI without coding, easy voice agent creator">
+```
+
+### AI Phone Agent (/ai-phone-agent)
+```html
+<title>AI Phone Agent | Automate Inbound & Outbound Calls | Bolka</title>
+<meta name="description" content="AI agents that handle phone calls like humans. Automate customer support, sales calls, appointment booking, and surveys. Available 24/7.">
+<meta name="keywords" content="AI phone agent, automated phone calls, AI calling agent, phone bot, voice AI for calls, telephone AI">
+```
+
+### Voice AI vs Chatbots (/voice-ai-vs-chatbots)
+```html
+<title>Voice AI vs Chatbots | Why Voice Converts Better | Bolka</title>
+<meta name="description" content="Voice AI outperforms text chatbots: 3x higher engagement, faster resolution, and better accessibility. See the data on why voice wins.">
+<meta name="keywords" content="voice AI vs chatbot, voice bot comparison, conversational AI comparison, voice assistant vs chatbot">
+```
+
+---
+
+## UPDATED: Core Pages (With Competitor-Informed Keywords)
+
+### Homepage (/) - ENHANCED
+```html
+<title>Bolka - Voice AI Platform | Deploy Anywhere - Browser, Website, Phone</title>
+<meta name="description" content="Enterprise voice AI platform. Deploy conversational agents on websites, browsers, and phone lines in minutes. No plugins, no downloads. Start free.">
+<meta name="keywords" content="voice AI platform, voice AI anywhere, browser voice AI, website voice bot, AI phone agent, conversational AI, enterprise voice AI">
+```
+
+### Embed (/embed) - ENHANCED
+```html
+<title>Embed Voice AI on Any Website | One-Line Install Widget | Bolka</title>
+<meta name="description" content="Add voice AI to your website with one line of code. Browser-native WebRTC, no plugins needed. Works on all modern browsers. Customize colors and personality.">
+<meta name="keywords" content="embed voice AI, voice AI widget, website voice bot, browser voice agent, embeddable AI, voice chat embed, WebRTC voice AI">
+```
+
+### Compare (/compare) - ENHANCED
+```html
+<title>Bolka vs Vapi vs Retell vs Bland | Voice AI Platform Comparison 2026</title>
+<meta name="description" content="Compare Bolka with Vapi, Retell AI, Bland AI, and others. See pricing, features, latency, and deployment options side-by-side.">
+<meta name="keywords" content="Bolka vs Vapi, Bolka vs Retell, Bolka vs Bland, voice AI comparison, best voice AI platform, AI phone agent comparison">
+```
+
+---
+
+## Competitor Comparison Pages (Create These!)
+
+### Bolka vs Vapi (/compare/vapi)
+```html
+<title>Bolka vs Vapi | Voice AI Platform Comparison 2026</title>
+<meta name="description" content="Bolka vs Vapi compared: pricing, features, ease of use, and deployment flexibility. See which voice AI platform fits your needs.">
+<meta name="keywords" content="Bolka vs Vapi, Vapi alternative, voice AI comparison, Vapi competitor, better than Vapi">
+```
+
+### Bolka vs Retell (/compare/retell)
+```html
+<title>Bolka vs Retell AI | AI Voice Agent Platform Comparison</title>
+<meta name="description" content="Bolka vs Retell AI: Compare call automation, latency, pricing, and integrations. Find the right AI phone agent platform for your business.">
+<meta name="keywords" content="Bolka vs Retell, Retell AI alternative, AI phone agent comparison, Retell competitor">
+```
+
+### Bolka vs Bland (/compare/bland)
+```html
+<title>Bolka vs Bland AI | Enterprise Voice AI Comparison 2026</title>
+<meta name="description" content="Bolka vs Bland AI head-to-head. Compare conversational AI features, voice cloning, scalability, and enterprise compliance.">
+<meta name="keywords" content="Bolka vs Bland, Bland AI alternative, enterprise voice AI, Bland competitor, voice AI pricing comparison">
+```
+
+### Bolka vs ElevenLabs (/compare/elevenlabs)
+```html
+<title>Bolka vs ElevenLabs | Voice AI & TTS Platform Comparison</title>
+<meta name="description" content="Bolka vs ElevenLabs for conversational AI. Compare real-time voice agents, browser integration, and pricing for voice AI.">
+<meta name="keywords" content="Bolka vs ElevenLabs, ElevenLabs alternative, voice AI vs TTS, conversational AI comparison">
+```
+
+### Best Vapi Alternatives (/alternatives/vapi)
+```html
+<title>Best Vapi Alternatives 2026 | Top Voice AI Platforms Compared</title>
+<meta name="description" content="Looking for Vapi alternatives? Compare Bolka, Retell, Bland, and more. Find the best voice AI platform for your use case and budget.">
+<meta name="keywords" content="Vapi alternatives, Vapi competitors, voice AI platforms, best voice AI, Vapi replacement">
+```
+
+### Best Retell Alternatives (/alternatives/retell)
+```html
+<title>Best Retell AI Alternatives 2026 | AI Phone Agent Platforms</title>
+<meta name="description" content="Top Retell AI alternatives for phone call automation. Compare features, pricing, and ease of use across leading voice AI platforms.">
+<meta name="keywords" content="Retell alternatives, Retell AI competitors, AI phone agent platforms, Retell replacement, call automation AI">
+```
+
+---
+
 ## How to Implement
 
 Add these tags inside the `<head>` section of each page:
