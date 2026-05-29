@@ -9,6 +9,9 @@ interface Clause {
   text: string;
   references: string[];
   referenced_by: string[];
+  category: string;
+  categories: string[];
+  category_scores: Record<string, number>;
 }
 
 interface ParsedAgreement {
@@ -31,11 +34,37 @@ function clauseLabel(c: Clause) {
   return `${clausePrefix(c.kind)}${c.number} ${c.title}`.trim();
 }
 
+// Deterministic chip colors per category so the same type always looks the
+// same across clauses and the legend.
+const CATEGORY_PALETTE = [
+  'bg-rose-100 text-rose-800 border-rose-200',
+  'bg-orange-100 text-orange-800 border-orange-200',
+  'bg-amber-100 text-amber-800 border-amber-200',
+  'bg-lime-100 text-lime-800 border-lime-200',
+  'bg-emerald-100 text-emerald-800 border-emerald-200',
+  'bg-teal-100 text-teal-800 border-teal-200',
+  'bg-cyan-100 text-cyan-800 border-cyan-200',
+  'bg-sky-100 text-sky-800 border-sky-200',
+  'bg-indigo-100 text-indigo-800 border-indigo-200',
+  'bg-violet-100 text-violet-800 border-violet-200',
+  'bg-fuchsia-100 text-fuchsia-800 border-fuchsia-200',
+  'bg-pink-100 text-pink-800 border-pink-200',
+];
+
+function categoryColor(category: string) {
+  let hash = 0;
+  for (let i = 0; i < category.length; i++) {
+    hash = (hash * 31 + category.charCodeAt(i)) >>> 0;
+  }
+  return CATEGORY_PALETTE[hash % CATEGORY_PALETTE.length];
+}
+
 export default function App() {
   const [agreement, setAgreement] = useState<ParsedAgreement | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
   const [backendUp, setBackendUp] = useState<'checking' | 'up' | 'down'>(
     'checking',
   );
@@ -111,6 +140,23 @@ export default function App() {
     return m;
   }, [agreement]);
 
+  // Primary-category breakdown for the filter bar (category -> clause count).
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    agreement?.clauses.forEach((c) => {
+      counts[c.category] = (counts[c.category] ?? 0) + 1;
+    });
+    return Object.entries(counts).sort((a, b) => b[1] - a[1]);
+  }, [agreement]);
+
+  const visibleClauses = useMemo(() => {
+    if (!agreement) return [];
+    if (!categoryFilter) return agreement.clauses;
+    return agreement.clauses.filter((c) =>
+      c.categories.includes(categoryFilter),
+    );
+  }, [agreement, categoryFilter]);
+
   const scrollTo = (id: string) => {
     setActiveId(id);
     clauseRefs.current[id]?.scrollIntoView({
@@ -170,6 +216,43 @@ export default function App() {
             <div className="text-xs uppercase tracking-wide text-slate-500 mb-2">
               {agreement.clause_count} clauses
             </div>
+
+            <div className="text-xs uppercase tracking-wide text-slate-500 mb-2 mt-4">
+              Filter by classification
+            </div>
+            <div className="flex flex-wrap gap-1.5 mb-4">
+              <button
+                onClick={() => setCategoryFilter(null)}
+                className={`text-xs px-2 py-1 rounded-full border transition-colors ${
+                  categoryFilter === null
+                    ? 'bg-slate-800 text-white border-slate-800'
+                    : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100'
+                }`}
+              >
+                All ({agreement.clause_count})
+              </button>
+              {categoryCounts.map(([cat, count]) => (
+                <button
+                  key={cat}
+                  onClick={() =>
+                    setCategoryFilter(categoryFilter === cat ? null : cat)
+                  }
+                  className={`text-xs px-2 py-1 rounded-full border transition-all ${categoryColor(
+                    cat,
+                  )} ${
+                    categoryFilter === cat
+                      ? 'ring-2 ring-offset-1 ring-slate-400'
+                      : 'opacity-90 hover:opacity-100'
+                  }`}
+                >
+                  {cat} ({count})
+                </button>
+              ))}
+            </div>
+
+            <div className="text-xs uppercase tracking-wide text-slate-500 mb-2">
+              Clauses
+            </div>
             <ul className="space-y-1">
               {agreement.clauses.map((c) => (
                 <li key={c.id}>
@@ -192,7 +275,25 @@ export default function App() {
           </aside>
 
           <section className="space-y-4">
-            {agreement.clauses.map((c) => (
+            {categoryFilter && (
+              <div className="text-sm text-slate-600 flex items-center gap-2">
+                Showing <strong>{visibleClauses.length}</strong> clause(s) tagged
+                <span
+                  className={`px-2 py-0.5 rounded-full border text-xs ${categoryColor(
+                    categoryFilter,
+                  )}`}
+                >
+                  {categoryFilter}
+                </span>
+                <button
+                  onClick={() => setCategoryFilter(null)}
+                  className="text-brand-600 hover:underline"
+                >
+                  clear
+                </button>
+              </div>
+            )}
+            {visibleClauses.map((c) => (
               <div
                 key={c.id}
                 ref={(el) => (clauseRefs.current[c.id] = el)}
@@ -212,6 +313,29 @@ export default function App() {
                   <span className="ml-auto text-xs uppercase tracking-wide text-slate-400">
                     {c.kind} {c.number}
                   </span>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-2 mb-4">
+                  <span className="text-xs uppercase tracking-wide text-slate-500">
+                    Classification:
+                  </span>
+                  {c.categories.map((cat, idx) => (
+                    <button
+                      key={cat}
+                      onClick={() => setCategoryFilter(cat)}
+                      title={
+                        idx === 0
+                          ? 'Primary clause type'
+                          : 'Secondary classification'
+                      }
+                      className={`text-xs px-2 py-1 rounded-full border transition-all ${categoryColor(
+                        cat,
+                      )} ${idx === 0 ? 'font-semibold' : 'opacity-80'}`}
+                    >
+                      {cat}
+                      {idx === 0 && c.categories.length > 1 ? ' ★' : ''}
+                    </button>
+                  ))}
                 </div>
 
                 {(c.references.length > 0 || c.referenced_by.length > 0) && (

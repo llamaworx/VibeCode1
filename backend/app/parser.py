@@ -7,6 +7,8 @@ from typing import BinaryIO
 
 from docx import Document
 
+from .classifier import classify
+
 # Matches headings like "ARTICLE 1", "ARTICLE-1", "ARTICLE 1A", "Section 2", "Clause 3.1"
 HEADING_RE = re.compile(
     r"^\s*(ARTICLE|SECTION|CLAUSE|§)\s*[-–—]?\s*([0-9]+[A-Z]?(?:\.[0-9]+)*)\s*$",
@@ -34,6 +36,9 @@ class Clause:
     paragraphs: list[str] = field(default_factory=list)
     references: list[str] = field(default_factory=list)       # ids this clause points to
     referenced_by: list[str] = field(default_factory=list)    # ids that point at this clause
+    category: str = "General"                                  # primary clause type
+    categories: list[str] = field(default_factory=list)        # all matched types, best first
+    category_scores: dict[str, int] = field(default_factory=dict)
 
 
 def _canonical_id(kind: str, number: str) -> str:
@@ -123,6 +128,12 @@ def parse_agreement(file: BinaryIO, filename: str) -> dict:
     clauses = _split_into_clauses(paragraphs)
     _build_reference_graph(clauses)
 
+    for c in clauses:
+        result = classify(c.title, c.text)
+        c.category = result.category
+        c.categories = result.categories
+        c.category_scores = result.scores
+
     title = paragraphs[0] if paragraphs else filename
     return {
         "filename": filename,
@@ -137,6 +148,9 @@ def parse_agreement(file: BinaryIO, filename: str) -> dict:
                 "text": c.text,
                 "references": c.references,
                 "referenced_by": c.referenced_by,
+                "category": c.category,
+                "categories": c.categories,
+                "category_scores": c.category_scores,
             }
             for c in clauses
         ],

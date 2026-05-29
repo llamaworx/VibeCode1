@@ -31,7 +31,10 @@ uvicorn app.main:app --reload --port 8000
       "title": "OBLIGATIONS OF THE PARTIES",
       "text": "...",
       "references": [],
-      "referenced_by": ["ART-4"]
+      "referenced_by": ["ART-4"],
+      "category": "Obligations",
+      "categories": ["Obligations", "Confidentiality"],
+      "category_scores": { "Confidentiality": 39, "Obligations": 30 }
     }
   ]
 }
@@ -47,3 +50,14 @@ uvicorn app.main:app --reload --port 8000
 4. Inside each body, scan for inline references (`Article 3`,
    `Articles 4 and 5`, `Section 2.1`, …) and link `references` →
    `referenced_by` between matching clause numbers.
+
+## How classification works (`app/classifier.py`)
+
+Each clause is scored against a weighted keyword taxonomy of legal categories
+(Obligations, Rights, Confidentiality, Intellectual Property, Termination,
+Liability & Indemnity, Governing Law, Dispute Resolution, …). A match in the
+clause heading is weighted far more than a body match, so the primary
+`category` reflects the clause's stated intent rather than incidental body
+vocabulary. Secondary matches above a relative threshold are returned in
+`categories`, and the full `category_scores` map makes every decision
+auditable. The classifier is rule-based and has no ML dependency.
